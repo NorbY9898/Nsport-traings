@@ -632,6 +632,117 @@
     .size-chart th,.size-chart td{padding:10px 12px;border-bottom:1px solid rgba(255,255,255,.08);text-align:left;color:#dce7ff}
     .size-chart th{color:#fff;background:linear-gradient(135deg,var(--blue),var(--red))}
 
+    /* NSport black/red visual direction: retains the existing component layout and motion. */
+    :root{
+      --red:#e30613;
+      --red2:#ff3545;
+      --blue:#6d0710;
+      --blue2:#ff6570;
+      --bg:#050506;
+      --card:#100d0f;
+      --card2:#1b1115;
+      --muted:#c3b9bc;
+      --line:rgba(255,255,255,.11);
+      --line2:rgba(227,6,19,.42);
+    }
+    body{
+      background:
+        radial-gradient(circle at 14% 0%, rgba(227,6,19,.32), transparent 30%),
+        radial-gradient(circle at 92% 12%, rgba(115,3,12,.38), transparent 34%),
+        linear-gradient(120deg, transparent 0 43%, rgba(227,6,19,.055) 43.2% 44%, transparent 44.2%),
+        linear-gradient(180deg,#050506 0%,#090608 46%,#100508 100%);
+    }
+    body::before{
+      background:
+        linear-gradient(rgba(255,255,255,.022) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.022) 1px, transparent 1px),
+        repeating-linear-gradient(125deg, transparent 0 34px, rgba(227,6,19,.035) 35px, transparent 37px);
+    }
+    .top{background:rgba(8,6,8,.88);border-color:rgba(227,6,19,.16)}
+    .brand-logo{box-shadow:0 12px 30px rgba(227,6,19,.24)}
+    .brand,.highlight-anim{text-shadow:0 0 27px rgba(227,6,19,.35)}
+    .nav a:hover{border-color:rgba(227,6,19,.36);background:rgba(227,6,19,.13)}
+    .lang-btn.active,.lang-btn:hover,.gold,.hero-stage::after,.catalog-top-badge.tag{
+      background:linear-gradient(135deg,#fb1728 0%,#b00010 50%,#16080b 100%);
+    }
+    .gold{box-shadow:0 18px 38px rgba(227,6,19,.3),0 0 35px rgba(227,6,19,.18)}
+    .gold:hover{box-shadow:0 22px 48px rgba(227,6,19,.38),0 0 42px rgba(227,6,19,.27)}
+    .ghost:hover{border-color:rgba(227,6,19,.35);box-shadow:0 0 27px rgba(227,6,19,.15)}
+    .kicker{border-color:rgba(227,6,19,.38);background:rgba(227,6,19,.12);color:#ffb2b9}
+    .kicker::before,.trust-badge .dot{
+      background:var(--red);
+      box-shadow:0 0 18px rgba(227,6,19,.68);
+    }
+    .highlight-anim::after{
+      background:linear-gradient(90deg, rgba(227,6,19,.16), rgba(227,6,19,.48), rgba(255,255,255,.13));
+    }
+    .hero-stage{
+      background:radial-gradient(circle at 27% 12%,rgba(227,6,19,.29),transparent 39%),radial-gradient(circle at 88% 18%,rgba(255,255,255,.07),transparent 33%),linear-gradient(180deg,#1c1014,#080608);
+      box-shadow:var(--shadow),0 0 42px rgba(227,6,19,.19);
+    }
+    .hero-stage::before,.showcase-card::before,.catalog-card::before,.cart-box::before{
+      background:linear-gradient(135deg, rgba(227,6,19,.8), rgba(255,49,65,.45), rgba(255,255,255,.12));
+    }
+    .showcase-card,.catalog-card,.cart-box{
+      background:linear-gradient(180deg,rgba(26,17,20,.97),rgba(10,8,9,.98));
+    }
+    .showcase-card:hover::before,.catalog-card:hover::before,.cart-box:hover::before{
+      filter:drop-shadow(0 0 20px rgba(227,6,19,.52));
+    }
+    .showcase-card:hover,.catalog-card:hover{
+      box-shadow:0 30px 75px rgba(0,0,0,.6),0 0 36px rgba(227,6,19,.22);
+    }
+    .image-frame,.catalog-card-image{
+      background:radial-gradient(circle at top,rgba(227,6,19,.18),transparent 45%),linear-gradient(180deg,#221317,#090708);
+    }
+    .catalog-card-image::before{
+      background:radial-gradient(circle at 18% 10%,rgba(227,6,19,.28),transparent 34%),radial-gradient(circle at 86% 18%,rgba(255,255,255,.07),transparent 30%);
+    }
+    .field:focus,textarea:focus{
+      border-color:rgba(227,6,19,.62);
+      box-shadow:0 0 0 3px rgba(227,6,19,.14),0 0 20px rgba(227,6,19,.11);
+    }
+    .pill{color:#ffadb5;background:rgba(227,6,19,.12)}
+    .catalog-card-code,.cart-code,.float-card small{color:#ff939d}
+    .mini-trust.blue{color:#ffb3b9;border-color:rgba(227,6,19,.25);background:rgba(227,6,19,.1)}
+    .order-note{
+      border-color:rgba(227,6,19,.24);
+      background:linear-gradient(180deg,rgba(227,6,19,.09),rgba(255,255,255,.03)),radial-gradient(circle at top right,rgba(227,6,19,.18),transparent 42%);
+    }
+    .form-message.info,.catalog-message.info{color:#ffb5bc;background:rgba(227,6,19,.09);border-color:rgba(227,6,19,.22)}
+    .modal-box{box-shadow:var(--shadow),0 0 38px rgba(227,6,19,.2)}
+    .color-chip.active,.color-chip:hover{border-color:rgba(227,6,19,.48);background:rgba(227,6,19,.13)}
+    .stock-progress-bar{background:linear-gradient(90deg,#82000b,var(--red2))}
+    .size-chart th{background:linear-gradient(135deg,#35070d,var(--red))}
+    .legal-info{
+      margin-top:14px;
+      padding:17px 18px;
+      border-radius:18px;
+      border:1px solid rgba(227,6,19,.2);
+      background:rgba(255,255,255,.035);
+    }
+    .legal-info-title{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:#ff939d;font-weight:900;margin-bottom:10px}
+    .legal-info ul{padding-left:19px;display:grid;gap:7px;color:#d7cdd0;font-size:13px;line-height:1.5}
+    .consent-row{
+      display:flex;
+      align-items:flex-start;
+      gap:11px;
+      padding:15px 16px;
+      margin-top:15px;
+      border-radius:16px;
+      border:1px solid rgba(255,255,255,.1);
+      background:rgba(255,255,255,.04);
+      color:#ece3e5;
+      font-size:14px;
+      line-height:1.5;
+    }
+    .consent-row input{width:18px;height:18px;margin-top:2px;accent-color:var(--red);flex:0 0 auto}
+    .consent-row a{color:#ff6d79;text-decoration:underline;text-underline-offset:3px}
+    .footer{align-items:center;color:#b5a9ad}
+    .footer-links{display:flex;gap:18px;flex-wrap:wrap}
+    .footer-links a{font-size:14px;font-weight:700;color:#eee5e7;transition:.2s ease}
+    .footer-links a:hover{color:#ff5866;text-shadow:0 0 15px rgba(227,6,19,.48)}
+
     @media(max-width:1180px){
       .hero{grid-template-columns:1fr}
       .hero-stage{min-height:560px}
@@ -728,7 +839,7 @@
         <div class="showcase-card">
           <div class="image-frame">
             <button class="slider-arrow left" type="button" data-slider-prev="left">‹</button>
-            <img id="slider-left" class="slider-image" src="training1.jpg" alt="Patrick training">
+            <img id="slider-left" class="slider-image" src="training1.jpg" alt="Patrick training" onerror="if(!this.src.endsWith('patrick-hero.jpg'))this.src='patrick-hero.jpg'">
             <button class="slider-arrow right" type="button" data-slider-next="left">›</button>
             <div class="slider-dots" id="dots-left"></div>
           </div>
@@ -736,7 +847,7 @@
         <div class="showcase-card">
           <div class="image-frame">
             <button class="slider-arrow left" type="button" data-slider-prev="center">‹</button>
-            <img id="slider-center" class="slider-image" src="training2.jpg" alt="Patrick training">
+            <img id="slider-center" class="slider-image" src="training2.jpg" alt="Patrick training" onerror="if(!this.src.endsWith('patrick-hero.jpg'))this.src='patrick-hero.jpg'">
             <button class="slider-arrow right" type="button" data-slider-next="center">›</button>
             <div class="slider-dots" id="dots-center"></div>
           </div>
@@ -744,7 +855,7 @@
         <div class="showcase-card">
           <div class="image-frame">
             <button class="slider-arrow left" type="button" data-slider-prev="right">‹</button>
-            <img id="slider-right" class="slider-image" src="training3.jpg" alt="Patrick training">
+            <img id="slider-right" class="slider-image" src="training3.jpg" alt="Patrick training" onerror="if(!this.src.endsWith('patrick-hero.jpg'))this.src='patrick-hero.jpg'">
             <button class="slider-arrow right" type="button" data-slider-next="right">›</button>
             <div class="slider-dots" id="dots-right"></div>
           </div>
@@ -817,6 +928,22 @@
             <span id="orderNoteText"><strong>Notă:</strong> comanda se trimite pe e-mail pentru confirmare. Prețul final și facturarea se stabilesc ulterior după verificarea detaliilor.</span>
           </div>
 
+          <aside class="legal-info" aria-label="Informații legale despre comandă">
+            <div class="legal-info-title">Informații importante</div>
+            <ul>
+              <li>Comanda devine finală doar după confirmarea echipei NSport.</li>
+              <li>Prețurile afișate pot fi orientative și pot varia în funcție de personalizare.</li>
+              <li>Imaginile produselor au caracter informativ.</li>
+              <li>Produsele personalizate realizate la comandă pot fi returnate doar în cazul unui defect de fabricație.</li>
+              <li>Confirmarea comenzilor se face în 24-48 de ore.</li>
+            </ul>
+          </aside>
+
+          <label class="consent-row" for="catalogGdprConsent">
+            <input type="checkbox" name="gdpr_consent" id="catalogGdprConsent" value="Da" required>
+            <span>Sunt de acord cu <a href="termeni.html" target="_blank" rel="noopener">Termenii și Condițiile</a> și <a href="gdpr.html" target="_blank" rel="noopener">Politica de Confidențialitate</a>.</span>
+          </label>
+
           <button class="btn gold" type="submit" id="catalogCheckoutBtn" style="width:100%;margin-top:10px;">Trimite comanda</button>
           <div class="catalog-message" id="catalogCheckoutMessage"></div>
         </form>
@@ -825,8 +952,12 @@
   </main>
 
   <footer class="container footer">
-    <span id="footer1">© 2026 Nsport`s. Toate drepturile rezervate.</span>
-    <span id="footer2">Patrick treninguri, accesorii sportive și produse personalizate.</span>
+    <span id="footer1">NSports © 2026</span>
+    <nav class="footer-links" aria-label="Linkuri legale">
+      <a href="termeni.html">Termeni și Condiții</a>
+      <a href="gdpr.html">Politica de Confidențialitate</a>
+      <a href="mailto:steliannagy@yahoo.com">Contact</a>
+    </nav>
   </footer>
 
   <div class="modal" id="catalogModal">
@@ -838,7 +969,7 @@
 
       <div class="modal-grid">
         <div class="modal-preview">
-          <img id="catalogPreviewImage" src="" alt="Patrick trening">
+          <img id="catalogPreviewImage" src="" alt="Patrick trening" onerror="if(!this.src.endsWith('patrick-hero.jpg'))this.src='patrick-hero.jpg'">
         </div>
 
         <div class="modal-info">
@@ -980,7 +1111,7 @@
         readyText:'Catalog cu căutare, culoare, stoc, mărimi, cantitate și trimitere pe e-mail către Nsport`s.',
         cartMini:'Coș', cartTitle:'Treninguri selectate', cartEmpty:'Încă nu există treninguri selectate.',
         summarySubtotalLabel:'Subtotal produse', summaryDiscountLabel:'Reducere', cartTotalLabel:'Total estimat',
-        footer1:'© 2026 Nsport`s. Toate drepturile rezervate.',
+        footer1:'NSports © 2026',
         footer2:'Patrick treninguri, accesorii sportive și produse personalizate.',
         searchPlaceholder:'Căutare după cod sau nume', couponPlaceholder:'Introdu codul de reducere',
         applyCouponBtn:'Aplică cupon', catalogCheckoutBtn:'Trimite comanda',
@@ -1010,7 +1141,7 @@
         readyText:'Kereshető katalógus színnel, készlettel, mérettel, darabszámmal és e-mailes rendelésküldéssel.',
         cartMini:'Kosár', cartTitle:'Kiválasztott trainingek', cartEmpty:'Még nincs kiválasztott training.',
         summarySubtotalLabel:'Termékek összege', summaryDiscountLabel:'Kedvezmény', cartTotalLabel:'Becsült végösszeg',
-        footer1:'© 2026 Nsport`s. Minden jog fenntartva.',
+        footer1:'NSports © 2026',
         footer2:'Patrick trainingek, sportkiegészítők és személyre szabott termékek.',
         searchPlaceholder:'Keresés kód vagy név alapján', couponPlaceholder:'Kuponkód megadása',
         applyCouponBtn:'Kupon alkalmazása', catalogCheckoutBtn:'Rendelés elküldése',
@@ -1109,7 +1240,7 @@
               <span class="catalog-top-badge code">${model.code}</span>
               <span class="catalog-top-badge tag">${tr('premiumTag')}</span>
             </div>
-            <img src="${model.image}" alt="${model.name}">
+            <img src="${model.image}" alt="${model.name}" onerror="if(!this.src.endsWith('patrick-hero.jpg'))this.src='patrick-hero.jpg'">
           </div>
           <div class="catalog-card-body">
             <div class="catalog-card-code">${model.code}</div>
@@ -1336,6 +1467,12 @@
         return;
       }
 
+      if(!$('catalogGdprConsent').checked){
+        event.preventDefault();
+        setMessage($('catalogCheckoutMessage'), 'error', 'Pentru trimiterea comenzii este necesar acordul privind termenii și politica de confidențialitate.');
+        return;
+      }
+
       const totals = calculateCartTotals();
 
       const summary = state.catalogCart.map(item => {
@@ -1452,6 +1589,7 @@
       console.assert(document.querySelectorAll('.lang-btn').length === 2, 'Expected 2 language buttons');
       console.assert($('catalogCheckoutForm').action.includes(ORDER_TO_EMAIL), 'Primary email OK');
       console.assert(document.querySelector('#catalogCheckoutForm input[name="_cc"]').value === ORDER_CC_EMAIL, 'CC email OK');
+      console.assert($('catalogGdprConsent').required, 'GDPR consent required');
     }
 
     function handleReturn(){
